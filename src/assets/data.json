@@ -1,0 +1,58 @@
+{
+  "characters": [
+    {
+      "id" : 1,
+      "name": "gia",
+      "hebName": "גיה",
+      "image": "gia/gia.png",
+      "description": "גיה המגניבה היא כזאת מגניבה",
+      "colorPages": {
+        "1": {
+          "srcColorPage": "gia/color-page-supergia.pdf",
+          "picDes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu tellus, finibus eget interdum a, molestie et libero. Etiam pellentesque magna at ultricies placerat. "
+        },
+        "2": {
+          "srcColorPage": "gia/color-page-peace.pdf",
+          "picDes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu tellus, finibus eget interdum a, molestie et libero. Etiam pellentesque magna at ultricies placerat. "
+        }
+      },
+      "games": {}
+    },
+    {
+      "id" : 2,
+      "name": "speedyAndBlue",
+      "hebName": "ספידי ובלו",
+      "image": "speedyAndBlue/speedyAndBlue.png",
+      "description": "אלו הם ספידי ובלו החמודים, רודפים אחרי סקייטבורדים מעופפים",
+      "colorPages": {
+        "1": {
+          "srcColorPage": "speedyAndBlue/color-page-s&bOnCar.pdf",
+          "picDes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu tellus, finibus eget interdum a, molestie et libero. Etiam pellentesque magna at ultricies placerat. "
+        },
+        "2": {
+          "srcColorPage": "speedyAndBlue/color-page-s&bOnBoat.pdf",
+          "picDes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu tellus, finibus eget interdum a, molestie et libero. Etiam pellentesque magna at ultricies placerat. "
+        }
+      },
+      "games": {}
+    },
+    {
+      "id" : 3,
+      "name": "hipo",
+      "hebName": "היפו",
+      "image": "hipo/hipoe.png",
+      "description": "זהו היפו האמיץ, אשר מציל את העולם ונהנה מהחיים",
+      "colorPages": {
+        "1": {
+          "srcColorPage": "speedyAndBlue/color-page-s&bOnCar.pdf",
+          "picDes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu tellus, finibus eget interdum a, molestie et libero. Etiam pellentesque magna at ultricies placerat. "
+        },
+        "2": {
+          "srcColorPage": "speedyAndBlue/color-page-s&bOnBoat.pdf",
+          "picDes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu tellus, finibus eget interdum a, molestie et libero. Etiam pellentesque magna at ultricies placerat. "
+        }
+      },
+      "games": {}
+    }
+  ]
+}
