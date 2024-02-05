@@ -3,21 +3,21 @@ import { CarouselCard } from './CarouselCards';
 import { TbArrowBigRightFilled, TbArrowBigLeftFilled } from 'react-icons/tb'
 import { Center } from '@mantine/core';
 
-const data = [
-  {
-    src: 'hipo/hipoPoster.jpeg',
-    characterImage: 'hipo/hipo.png',
-    friendName: 'סופר היפו',
-    name:'hipo',
-    friendDescription:'זהו היפו האמיץ, אשר מציל את העולם ונהנה מהחיים',
-  },
-  {
-    src: 'speedyAndBlue/speedyAndBluePoster.jpeg',
-    characterImage: 'speedyAndBlue/speedyAndBlue.png',
-    friendName: 'ספידי ובלו',
-    name: 'speedy-and-blue',
-    friendDescription:'אלו הם ספידי ובלו החמודים, רודפים אחרי סקייטבורדים מעופפים',
-  },
+// const data = [
+//   {
+//     src: 'hipo/hipoPoster.jpeg',
+//     characterImage: 'hipo/hipo.png',
+//     friendName: 'סופר היפו',
+//     name:'hipo',
+//     friendDescription:'זהו היפו האמיץ, אשר מציל את העולם ונהנה מהחיים',
+//   },
+//   {
+//     src: 'speedyAndBlue/speedyAndBluePoster.jpeg',
+//     characterImage: 'speedyAndBlue/speedyAndBlue.png',
+//     friendName: 'ספידי ובלו',
+//     name: 'speedy-and-blue',
+//     friendDescription:'אלו הם ספידי ובלו החמודים, רודפים אחרי סקייטבורדים מעופפים',
+//   },
   // {
   //   src: 'pach.png',
   //   width: "130px",
@@ -39,12 +39,12 @@ const data = [
   //   height: "130px",
   // },
 
-]
+// ]
 
-const HomeCarousel = () => {
+const HomeCarousel = (props) => {
 
   return (
-    <Center>
+    <Center className='carousel-wrapper'>
       <Carousel
         className="carousel"
         my='sm'
@@ -56,10 +56,10 @@ const HomeCarousel = () => {
         
       >
         {
-          data.map(({ src, friendName, name,friendDescription,characterImage }, index) => {
+          props.characters.map(({}, id) => {
             return (
-              <Carousel.Slide key={index} className='character'>
-                <CarouselCard src={src} friendName={friendName} friendDescription={friendDescription} name={name} characterImage={characterImage}/>
+              <Carousel.Slide key={id} className='character'>
+                <CarouselCard character={props.characters[id]}/>
               </Carousel.Slide>
             )
           })

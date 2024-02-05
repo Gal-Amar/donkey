@@ -1,41 +1,32 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import video from './../assets/donkeyVideo.mp4'
-import {Image} from '@mantine/core'
+import GridCard from './GridCard';
+import {Grid, Card} from '@mantine/core'
 
 
-function gridCard(props) {
-  return(
-  <div className="card-contenct">
-    <div className="card-image">
-      <Image src={require(`./../assets/${props.data}`)} />
-    </div>
-    <div className="card-text">
-
-    </div>
-  </div>
-  )
-}
-function GridSection() {
+function GridSection(props) {
   const [mutedVideo, setMutedVideo] = useState(true);
-    return (
-     <div className="grid-wrapper">
-      
-      <div className="hipo">
-        gridCard(data.hipo)
-      </div>
-      <div className="piz">Piz</div>
-      <div className="suki">Suki</div>
-      <div className="humb">Humb</div>
-      <div className="video">     
-        <video onClick={() => setMutedVideo(!mutedVideo)} src={video} loop autoplay={"autoplay"} muted={mutedVideo} className='video-style'>
-        </video>
-      </div>
-      <div className="speedyAndBlue">Speedy And Blue</div>
-      <div className="gia">Gia</div>
-      <div className="monster">Monster</div>
 
-     </div>
-    );
+  return (
+    <Grid columns={12} className='grid-wrapper'>
+      <Grid.Col span={4} className="piz">Piz</Grid.Col>
+      <Grid.Col span={4} className="suki">Suki</Grid.Col>
+      <Grid.Col span={4} className="humb">Humb</Grid.Col>
+      <Grid.Col span={8} className="video">
+        <Card className="video-card" radius="md" shadow="sm" withBorder>
+          <Card.Section>
+            <video onClick={() => setMutedVideo(!mutedVideo)} src={video} loop autoPlay={"autoPlay"} muted={mutedVideo} className='video-style' />
+          </Card.Section>
+        </Card>
+      </Grid.Col>
+      <Grid.Col span={4} className="hipo">
+         <GridCard character={props.characters[2]} />
+      </Grid.Col>
+      <Grid.Col span={4} className="speedyAndBlue">Speedy And Blue</Grid.Col>
+      <Grid.Col span={4} className="gia">Gia</Grid.Col>
+      <Grid.Col span={4} className="monster">Monster</Grid.Col>
+    </Grid>
+  )
 }
 
 export default GridSection
